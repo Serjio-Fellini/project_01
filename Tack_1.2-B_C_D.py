@@ -42,7 +42,7 @@ Tracks=len (my_favorite_songs_dict)
 n=3
 # В списке rand_list формируем список номеров случайно выбранных песен
 rand_list=[]
-
+import random
 for i in range(n):
     # Первый номер прописываем без проверки условия на уникальность
     randomiser=random.randint(0,Tracks-1)
@@ -87,6 +87,8 @@ for key_in in my_favorite_songs_dict.keys():
 # Проверка промежуточных результатов при отладке
 # print(alltime_min)
 # print(alltime_sec)
+
+
 
 if alltime_sec >= 0.6:
 # Выделяем из секунд, превышающих 60, дополнительные минуты
