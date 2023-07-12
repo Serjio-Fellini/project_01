@@ -57,3 +57,24 @@ print(remove_last_em(stroka))
 
 def remove_word_with_one_em(s):
     pass
+
+
+stroka="Hi! Hello! Hello!!! Oh, no!!"
+def remove_word_with_one_em(s):
+    stroka_s = s.split(' ') # Разделяем строку на слова по одиночным пробелам (условие задачи)
+#    print(stroka_s)
+    stroka_new = []
+#    print(stroka_new)
+    for i in range(len(stroka_s)):
+        schet = 0
+        for j in stroka_s[i]: # Для каждого слова считаем количество восклицательных знаков
+            if j == '!':
+                schet += 1
+        if schet > 1:   # Если их больше одного, добавляем слово к новой строке
+            stroka_new.append(stroka_s[i])
+        elif schet == 0: # Если не найдено ни одного, добавляем слово к новой строке
+            stroka_new.append(stroka_s[i])
+    return stroka_new
+
+remove_word_with_one_em(stroka)
+print(remove_word_with_one_em(stroka))
