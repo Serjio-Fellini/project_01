@@ -27,6 +27,19 @@ print(remove_exclamation_marks(stroka))
 def remove_last_em(s):
     pass
 
+def remove_last_em(s):
+    if s[-1] == '!':
+#        stroka = list(s)
+#        del stroka[-1]
+        stroka = s [0 : -2]
+    return ''.join(stroka)
+
+stroka="Hi! Hello!   Hello!!!        Oh, no!!"
+print(remove_last_em(stroka))
+
+
+
+
 
 # Дополнительно
 
